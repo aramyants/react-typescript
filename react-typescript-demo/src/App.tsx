@@ -1,34 +1,41 @@
 import './App.css';
+import { Button } from './components/Button';
 import { Greet } from './components/Greet';
+import { Heading } from './components/Heading';
+import { Input } from './components/Input';
+import { Oscar } from './components/Oscar';
 import { Person } from './components/Person';
 import { PersonList } from './components/PersonList';
+import { Status } from './components/Status';
 
 function App() {
   const personName = {
     first: 'Bruce',
-    last: 'Wayne'
-  }
+    last: 'Wayne',
+  };
 
   const nameList = [
     {
       first: 'Bruce',
-      last: 'Wayne'
+      last: 'Wayne',
     },
     {
       first: 'Clark',
-      last: 'Kent'
+      last: 'Kent',
     },
     {
       first: 'Peter',
-      last: 'Parker'
-    }
-  ]
+      last: 'Parker',
+    },
+  ];
   return (
     <>
-      <div className='App'>
-        <Greet name={'Aram'} messageCount={20} isLoggedIn={false} />
-        <Person name={personName}/>
-        <PersonList names={nameList}/>
+      <div className="App">
+        <Button
+          handleClick={(event, id) => console.log('Button clicked', event, id)}
+        />
+        <Input  handleChange={(event) => console.log('Input changed', event)} />
+
       </div>
     </>
   );
