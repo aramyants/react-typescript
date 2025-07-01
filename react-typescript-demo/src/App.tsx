@@ -1,12 +1,13 @@
 import './App.css';
-import { Container } from './components/Container';
+import { Counter } from './components/states/Counter';
+import { LoggedIn } from './components/states/LoggedIn';
 
 function App() {
 
   return (
     <>
       <div className="App">
-        <Container styles={{border: '1px solid white', padding: '1rem'}} />
+        <Counter />
       </div>
     </>
   );
