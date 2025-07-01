@@ -1,13 +1,15 @@
 import './App.css';
-import { Counter } from './components/states/Counter';
-import { LoggedIn } from './components/states/LoggedIn';
+import { Box } from './components/context/Box';
+import { ThemeContextProvider } from './components/context/ThemeContext';
 
 function App() {
 
   return (
     <>
       <div className="App">
-        <Counter />
+        <ThemeContextProvider>
+          <Box />
+        </ThemeContextProvider>
       </div>
     </>
   );
