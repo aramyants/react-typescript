@@ -1,12 +1,11 @@
 import './App.css';
-import { RandomNumber } from './components/restriction/RandomNumber';
-import { Toast } from './components/templateliterals/Toast';
+import { CustomButton } from './components/html/Button';
+
 function App() {
   return (
     <>
       <div className="App">
-       {/* <RandomNumber value={10} isPositive /> */}
-        <Toast position='center' />
+        <CustomButton variant="primary" onClick={() => console.log('Clicked')}> Primary Button </CustomButton>
       </div>
     </>
   );
